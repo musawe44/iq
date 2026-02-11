@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#e91e63" />
+  <title>Instagram Downloader</title>
+
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" sizes="192x192" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+
+  <style>
+    :root { --bg1:#6a11cb; --bg2:#e91e63; --card: rgba(255,255,255,.12); --text:#fff; --muted:rgba(255,255,255,.75); }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:var(--text);min-height:100vh}
+    .wrap{max-width:900px;margin:0 auto;padding:24px}
+    .top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{width:42px;height:42px;border-radius:50%}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.18);backdrop-filter: blur(10px);border-radius:18px;padding:18px;margin-top:18px}
+    h1{margin:8px 0 6px;font-size:28px}
+    p{margin:0;color:var(--muted);line-height:1.7}
+    .row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+    input{flex:1;min-width:220px;padding:14px 12px;border-radius:12px;border:1px solid rgba(255,255,255,.25);background:rgba(0,0,0,.15);color:#fff;outline:none}
+    button{padding:14px 14px;border-radius:12px;border:0;background:#0b5cff;color:#fff;cursor:pointer}
+    button.secondary{background:rgba(255,255,255,.14)}
+    .result{margin-top:12px;display:none}
+    .result a{color:#fff;text-decoration:underline}
+    .small{font-size:13px}
+    .footer{margin-top:16px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div class="brand">
+        <img src="assets/avatar.jpg" alt="Avatar">
+        <div>
+          <div class="small">PWA Ready</div>
+          <strong>Instagram Downloader</strong>
+        </div>
+      </div>
+      <a href="info.html" style="color:#fff;text-decoration:none">FAQ / Info</a>
+    </div>
+
+    <div class="card">
+      <h1>Instagram Downloader</h1>
+      <p>Download Video, Reels, Photo, IGTV, carousel from Instagram</p>
+
+      <div class="row">
+        <input id="igUrl" placeholder="ضع رابط الانستغرام هنا..." autocomplete="off" />
+        <button id="pasteBtn" class="secondary">Paste</button>
+        <button id="goBtn">Start</button>
+      </div>
+
+      <div class="row">
+        <button id="copyBtn" class="secondary">Copy URL</button>
+        <button id="clearBtn" class="secondary">Clear</button>
+        <button id="soundBtn" class="secondary">Sound</button>
+      </div>
+
+      <div id="result" class="card result">
+        <strong>Result</strong>
+        <p class="small" id="resultText"></p>
+      </div>
+
+      <div class="footer">
+        <span class="small">⚠️ تأكد إن الرابط عام (Public).</span>
+        <span class="small" id="status">Ready.</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/tools.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/event1111.js"></script>
+  <script src="js/more-info-button.js"></script>
+  <script src="js/base.js"></script>
+</body>
+</html>
