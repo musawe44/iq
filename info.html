@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Info / FAQ</title>
+  <style>
+    body{margin:0;font-family:system-ui;background:#0e0f14;color:#fff}
+    .wrap{max-width:900px;margin:0 auto;padding:24px}
+    a{color:#8ab4ff}
+    .card{background:#161824;border:1px solid #262a3a;border-radius:16px;padding:16px;margin-top:14px}
+    h1{margin:0 0 10px}
+    p{line-height:1.8;color:rgba(255,255,255,.78)}
+    code{background:#0b0c12;padding:2px 6px;border-radius:8px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a href="index.html">← رجوع</a>
+    <h1>FAQ / معلومات</h1>
+
+    <div class="card">
+      <h3>كيف أستخدم الموقع؟</h3>
+      <p>انسخ رابط البوست/ريل من إنستغرام، الصقه في الصفحة الرئيسية، ثم اضغط Start.</p>
+    </div>
+
+    <div class="card">
+      <h3>ليش ما يشتغل على بعض الروابط؟</h3>
+      <p>بعض المحتوى يكون خاص (Private) أو يحتاج تسجيل دخول. لازم يكون الرابط عام.</p>
+    </div>
+
+    <div class="card">
+      <h3>PWA</h3>
+      <p>إذا فتحت الموقع من Chrome على الجوال، تقدر تضيفه للشاشة الرئيسية.</p>
+      <p class="small">Service Worker: <code>sw.js</code> + Manifest: <code>manifest.json</code></p>
+    </div>
+
+    <script src="js/info-page.js"></script>
+  </div>
+</body>
+</html>
